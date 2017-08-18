@@ -20,3 +20,7 @@ function pad(n, width, z) {
   n = n + '';
   return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
 }
+
+function setMessage(message) {
+  document.getElementById('message').innerHTML = message;
+}
