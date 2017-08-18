@@ -2,17 +2,17 @@ let answer = document.getElementById('answer');
 let attempt = document.getElementById('attempt');
 
 function guess() {
-    let input = document.getElementById('user-guess');
-    //add functionality to guess function here
-    if (attempt.value == '' || answer.value == '') {
-        setHiddenFields();
-    }
+  let input = document.getElementById('user-guess');
+  //add functionality to guess function here
+  if (attempt.value == '' || answer.value == '') {
+    setHiddenFields();
+  }
 }
 
 //implement new functions here
 function setHiddenFields() {
-    answer.value = pad(Math.floor(Math.random() * 10000), 4);
-    attempt.value = 0;
+  answer.value = pad(Math.floor(Math.random() * 10000), 4);
+  attempt.value = 0;
 }
 
 function pad(n, width, z) {
