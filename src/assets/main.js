@@ -9,6 +9,7 @@ function guess() {
 //implement new functions here
 function setHiddenFields() {
     answer.value = pad(Math.floor(Math.random() * 10000), 4);
+    attempt.value = 0;
 }
 
 function pad(n, width, z) {
