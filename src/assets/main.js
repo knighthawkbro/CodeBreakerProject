@@ -24,3 +24,12 @@ function pad(n, width, z) {
 function setMessage(message) {
   document.getElementById('message').innerHTML = message;
 }
+
+function validateInput(input) {
+  if (input.length == 4) {
+    return true;
+  } else {
+    setMessage("Guesses must be exactly 4 characters long.");
+    return false;
+  }
+}
