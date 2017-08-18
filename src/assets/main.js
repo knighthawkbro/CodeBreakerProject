@@ -8,5 +8,11 @@ function guess() {
 
 //implement new functions here
 function setHiddenFields() {
-    answer.value = Math.floor(Math.random() * 10000);
+    answer.value = pad(Math.floor(Math.random() * 10000), 4);
+}
+
+function pad(n, width, z) {
+  z = z || '0';
+  n = n + '';
+  return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
 }
