@@ -39,3 +39,18 @@ function validateInput(input) {
     return false;
   }
 }
+
+function getResults(input) {
+  let results = document.getElementById('results');
+  let result = '<div class="row"><span class="col-md-6">' + input + '</span><span class="col-md-6">';
+  for (i = 0; i < input.length; i++) {
+    if (input[i] == answer.value[i]) {
+      result += '<span class="glyphicon glyphicon-ok"></span>';
+    } else if (answer.value.indexOf(input[i]) == -1) {
+      result += '<span class="glyphicon glyphicon-remove"></span>';
+    } else {
+      result += '<span class="glyphicon glyphicon-transfer"></span>';
+    }
+  }
+  results.innerHTML += result + '</span></div>'
+}
