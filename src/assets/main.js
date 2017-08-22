@@ -43,9 +43,11 @@ function validateInput(input) {
 function getResults(input) {
   let results = document.getElementById('results');
   let result = '<div class="row"><span class="col-md-6">' + input + '</span><span class="col-md-6">';
+  let correct = 0;
   for (i = 0; i < input.length; i++) {
     if (input[i] == answer.value[i]) {
       result += '<span class="glyphicon glyphicon-ok"></span>';
+      correct++;
     } else if (answer.value.indexOf(input[i]) == -1) {
       result += '<span class="glyphicon glyphicon-remove"></span>';
     } else {
@@ -53,4 +55,9 @@ function getResults(input) {
     }
   }
   results.innerHTML += result + '</span></div>'
+  if (correct == 4) {
+    return true;
+  } else {
+    return false;
+  }
 }
