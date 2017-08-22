@@ -16,8 +16,12 @@ function guess() {
 
   if (getResults(input)) {
     setMessage("You Win! :)");
+    showAnswer(true);
+    showReplay();
   } else if (attempt >= 10) {
     setMessage("You Lose! :(");
+    showAnswer(false);
+    showReplay();
   } else {
     setMessage("Incorrect, try again.");
   }
