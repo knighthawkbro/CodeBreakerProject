@@ -54,7 +54,7 @@ function validateInput(input) {
 
 function getResults(input) {
   let results = document.getElementById('results');
-  let result = '<div class="row"><span class="col-md-6">' + input + '</span><span class="col-md-6">';
+  let result = '<div class="row"><span class="col-md-6">' + input + '</span><div class="col-md-6">';
   let correct = 0;
   for (i = 0; i < input.length; i++) {
     if (input[i] == answer.value[i]) {
@@ -66,7 +66,7 @@ function getResults(input) {
       result += '<span class="glyphicon glyphicon-transfer"></span>';
     }
   }
-  results.innerHTML += result + '</span></div>'
+  results.innerHTML += result + '</div></div>'
   if (correct == 4) {
     return true;
   } else {
